@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Proud Project</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <img class="header__logo logo" src="images/icons/logo-header.png" width="195" height="38" alt="logo" />
+        <a class="header__phone" href="tel:+380631694939">+380 631 69 4939</a>
+        <button class="burger" type="button">
+          <span></span>
+        </button>
+      </header>
+      <div class="menu-box">
+        <nav class="menu">
+          <ul class="menu-box__list menu__list">
+            <li class="menu__item"><a class="menu__link" href="#portfolio">Портфоліо</a></li>
+            <li class="menu__item"><a class="menu__link" href="#price">Ціни</a></li>
+            <li class="menu__item"><a class="menu__link" href="#stages">етапи роботи</a></li>
+            <li class="menu__item"><a class="menu__link" href="#contascts">контакти</a></li>
+          </ul>
+        </nav>
+        <div class="menu-box__contacts menu__contacts">
+          <a class="btn header__contacts-btn" href="#section-form"><span>Отримати консультацію</span></a>
+          <a class="contact-link header__contact-link" href="#"><span>WHARSAPP</span></a>
+          <a class="contact-link header__contact-link" href="#"><span>TELEGRAM</span></a>
+          <a class="contact-link header__contact-link" href="#"><span>VIBER</span></a>
+        </div>
+        <a class="btn mobile__contacts-btn" href="#section-form">Отримати консультацію</a>
+        <a class="mobile__phone" href="tel:+380631694939">+380 631 69 4939</a>
+      </div>
+
+      <main class="main">
+        <section class="hero">
+          <h1 class="hero-title">ПроЄктування та будівництво сучасних <span>будинків під ключ</span></h1>
+          <div class="hero__inner">
+            <div class="container hero__container">
+              <div class="hero--decor"></div>
+              <div class="hero--decor"></div>
+              <div class="hero--decor"></div>
+              <a class="btn hero__contacts-btn" href="#section-form"><span>Отримати консультацію</span></a>
+            </div>
+            <div class="hero__inner--decor"></div>
+            <a class="hero__arrow-to-bottom arrow-to-bottom wow fadeInDown" href="#services"></a>
+          </div>
+        </section>
+        <section class="services" id="services">
+          <div class="container">
+            <div class="services__inner">
+              <div class="services__title-box title-box">
+                <h2 class="section-title title wow slideInLeft" data-wow-duration="1s" data-wow-delay="1s">Наші послуги</h2>
+              </div>
+              <div class="services__box">
+                <div class="services__item services__item--hover-scale wow flipInX" data-wow-duration="1s" data-wow-delay="2s">
+                  <img class="services__img services__img--1" src="images/pngwing.webp" loading="lazy" alt="image" />
+                  <h3 class="services__title">Проєктування</h3>
+                </div>
+                <div class="services__item services__item--hover-scale wow flipInX" data-wow-duration="2s" data-wow-delay="2.5s">
+                  <img class="services__img services__img--2" src="images/image-4.webp" loading="lazy" alt="image" />
+                  <h3 class="services__title">Реконструкція</h3>
+                </div>
+                <div
+                  class="services__item services__item--hover-scale services__item--hover-bg wow flipInX"
+                  data-wow-duration="1s"
+                  data-wow-delay="3s"
+                >
+                  <img
+                    class="services__img services__img--3"
+                    src="images/building-architecture.webp"
+                    loading="lazy"
+                    alt="image"
+                  />
+                  <h3 class="services__title">Комплексне будівництво</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-form" id="section-form">
+          <div class="container">
+            <div class="section-form__inner">
+              <div class="section-form__form-box form-box">
+                <div class="section-form__title-box title-box">
+                  <h2 class="section-title title">Отримайте детальну консультацію від експерта!</h2>
+                </div>
+                <p class="section-form__subtitle">Заповніть поля форми, і наш фахівець зв'яжеться з Вами протягом 30 хвилин</p>
+                <form class="form" action="#">
+                  <input class="section-form__input" type="text" placeholder="Імʼя" required />
+                  <input
+                    class="section-form__input"
+                    type="tel"
+                    placeholder="Номер телефону"
+                    pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+                    id="tel"
+                    required
+                  />
+                  <label class="section-form__label" for="tel"><span>*це поле може містити тільки цифри</span></label>
+                  <button class="section-form__btn" type="submit">Надіслати</button>
+                </form>
+                <div class="section-form__form-success form-success">
+                  <button class="form-success__btn"></button>
+                  <div class="section-form__title-box title-box">
+                    <h2 class="section-title title">Дякуємо</h2>
+                  </div>
+                  <p class="form-success__text">Ваші дані успішно надіслані, наш фахівець зв'яжеться з Вами протягом 30 хвилин</p>
+                </div>
+              </div>
+              <div class="section-form__title-box section-form__title-box--decor title-box">
+                <h2 class="section-title title">Хочете консультацію?</h2>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="portfolio" id="portfolio">
+          <div class="container">
+            <div class="portfolio__inner">
+              <div class="portfolio__title-box title-box">
+                <h2 class="section-title title">ПОРТФОЛІО</h2>
+              </div>
+              <div class="portfolio__slider">
+                <div class="portfolio__slider-item">
+                  <div class="portfolio__slider-top">
+                    <div class="portfolio__slider-title">
+                      <p>01</p>
+                      <p>Перший приклад</p>
+                    </div>
+                    <div class="portfolio__slider-descr">
+                      <p class="portfolio__slider-text">
+                        Короткий опис цього проєкту буквально речення, щоб зацікавити користувача. Можемо додати попап з медіа і
+                        прибрати стрічку фото. Короткий опис цього проєкту буквально речення, щоб зацікавити користувача. Можемо
+                        додати попап з медіа і прибрати стрічку фото.
+                      </p>
+                      <p class="portfolio__slider-date">2022</p>
+                      <p class="portfolio__slider-lavel">medium</p>
+                    </div>
+                  </div>
+                  <div class="portfolio__slider-bottom portfolio__carosel">
+                    <div class="portfolio__carosel-small">
+                      <div class="portfolio__carosel-image portfolio__carosel-small-img">
+                        <img src="images/slider-img-1.webp" loading="lazy" alt="images" />
+                      </div>
+                      <div class="portfolio__carosel-image portfolio__carosel-small-img">
+                        <img src="images/main-bg.webp" loading="lazy" alt="images" />
+                      </div>
+                      <div class="portfolio__carosel-image portfolio__carosel-small-img">
+                        <img src="images/slider-img-1.webp" loading="lazy" alt="images" />
+                      </div>
+                      <div class="portfolio__carosel-image portfolio__carosel-small-img">
+                        <img src="images/main-bg.webp" loading="lazy" alt="images" />
+                      </div>
+                      <div class="portfolio__carosel-image portfolio__carosel-small-img">
+                        <img src="images/mon.webp" loading="lazy" alt="images" />
+                      </div>
+                    </div>
+                    <div class="portfolio__carosel-big">
+                      <div class="portfolio__carosel-image portfolio__carosel-big-img">
+                        <img src="images/slider-img-1.webp" loading="lazy" alt="images" />
+                      </div>
+                      <div class="portfolio__carosel-image portfolio__carosel-big-img">
+                        <img src="images/main-bg.webp" loading="lazy" alt="images" />
+                      </div>
+                      <div class="portfolio__carosel-image portfolio__carosel-big-img">
+                        <img src="images/slider-img-1.webp" loading="lazy" alt="images" />
+                      </div>
+                      <div class="portfolio__carosel-image portfolio__carosel-big-img">
+                        <img src="images/main-bg.webp" loading="lazy" alt="images" />
+                      </div>
+                      <div class="portfolio__carosel-image portfolio__carosel-big-img">
+                        <img src="images/mon.webp" loading="lazy" alt="images" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio__slider-item">
+                  <div class="portfolio__slider-top">
+                    <div class="portfolio__slider-title">
+                      <p>03</p>
+                      <p>Третій приклад</p>
+                    </div>
+                    <div class="portfolio__slider-descr">
+                      <p class="portfolio__slider-text">
+                        Короткий опис цього проєкту буквально речення, щоб зацікавити користувача. Можемо додати попап з медіа і
+                        прибрати стрічку фото. Короткий опис цього проєкту буквально речення, щоб зацікавити користувача. Можемо
+                        додати попап з медіа і прибрати стрічку фото.
+                      </p>
+                      <p class="portfolio__slider-date">2022</p>
+                      <p class="portfolio__slider-lavel">medium</p>
+                    </div>
+                  </div>
+                  <div class="portfolio__slider-bottom portfolio__carosel">
+                    <div class="portfolio__carosel-small">
+                      <div class="portfolio__carosel-image portfolio__carosel-small-img">
+                        <img src="images/slider-img-1.webp" loading="lazy" alt="images" />
+                      </div>
+                      <div class="portfolio__carosel-image portfolio__carosel-small-img">
+                        <img src="images/main-bg.webp" loading="lazy" alt="images" />
+                      </div>
+                      <div class="portfolio__carosel-image portfolio__carosel-small-img">
+                        <img src="images/slider-img-1.webp" loading="lazy" alt="images" />
+                      </div>
+                      <div class="portfolio__carosel-image portfolio__carosel-small-img">
+                        <img src="images/main-bg.webp" loading="lazy" alt="images" />
+                      </div>
+                      <div class="portfolio__carosel-image portfolio__carosel-small-img">
+                        <img src="images/slider-img-1.webp" loading="lazy" alt="images" />
+                      </div>
+                    </div>
+                    <div class="portfolio__carosel-big">
+                      <div class="portfolio__carosel-image portfolio__carosel-big-img">
+                        <img src="images/slider-img-1.webp" loading="lazy" alt="images" />
+                      </div>
+                      <div class="portfolio__carosel-image portfolio__carosel-big-img">
+                        <img src="images/main-bg.webp" loading="lazy" alt="images" />
+                      </div>
+                      <div class="portfolio__carosel-image portfolio__carosel-big-img">
+                        <img src="images/slider-img-1.webp" loading="lazy" alt="images" />
+                      </div>
+                      <div class="portfolio__carosel-image portfolio__carosel-big-img">
+                        <img src="images/main-bg.webp" loading="lazy" alt="images" />
+                      </div>
+                      <div class="portfolio__carosel-image portfolio__carosel-big-img">
+                        <img src="images/slider-img-1.webp" loading="lazy" alt="images" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="price" id="price">
+          <div class="price__title-box title-box">
+            <h2 class="section-title title">Ціни на проєктування</h2>
+          </div>
+          <div class="price__inner">
+            <div class="price__item">
+              <div class="price__img-box">
+                <img class="price__img" src="images/icons/basic.svg" loading="lazy" alt="image" />
+              </div>
+              <h3 class="price__title">Basic</h3>
+              <div class="price__wrapp-box">
+                <div class="price__wrapp"><span>від</span><span>1 200 000 грн</span></div>
+                <div class="price__wrapp"><span>термін</span><span>7 днів</span></div>
+              </div>
+              <ul class="price__list">
+                <li class="price__list-item price__list-item--active">Архітектурний розділ</li>
+                <li class="price__list-item price__list-item--active">Конструктивний розділ</li>
+                <li class="price__list-item price__list-item--active">Прорахунок кошторису</li>
+                <li class="price__list-item price__list-item--disable">Дизайн проект</li>
+                <li class="price__list-item price__list-item--disable">Візуалізація</li>
+                <li class="price__list-item price__list-item--disable">
+                  Підготовка документів та отримання будівельного паспорту
+                </li>
+                <li class="price__list-item price__list-item--disable">Подача заявки на початок проведення будівельних робіт</li>
+              </ul>
+              <button class="price__btn"><span>Обрати цей варіант</span></button>
+            </div>
+            <div class="price__item">
+              <div class="price__img-box">
+                <img class="price__img" src="images/icons/medium.svg" loading="lazy" alt="image" />
+              </div>
+              <h3 class="price__title">Medium</h3>
+              <div class="price__wrapp-box">
+                <div class="price__wrapp"><span>від</span><span>2 200 000 грн</span></div>
+                <div class="price__wrapp"><span>термін</span><span>5 місяців</span></div>
+              </div>
+              <ul class="price__list">
+                <li class="price__list-item price__list-item--active">Архітектурний розділ</li>
+                <li class="price__list-item price__list-item--active">Конструктивний розділ</li>
+                <li class="price__list-item price__list-item--active">Прорахунок кошторису</li>
+                <li class="price__list-item price__list-item--active">Дизайн проект</li>
+                <li class="price__list-item price__list-item--disable">Візуалізація</li>
+                <li class="price__list-item price__list-item--disable">
+                  Підготовка документів та отримання будівельного паспорту
+                </li>
+                <li class="price__list-item price__list-item--disable">Подача заявки на початок проведення будівельних робіт</li>
+              </ul>
+              <button class="price__btn"><span>Обрати цей варіант</span></button>
+            </div>
+            <div class="price__item">
+              <div class="price__img-box">
+                <img class="price__img" src="images/icons/full.svg" loading="lazy" alt="image" />
+              </div>
+              <h3 class="price__title">Full</h3>
+              <div class="price__wrapp-box">
+                <div class="price__wrapp"><span>від</span><span>12 200 000 грн</span></div>
+                <div class="price__wrapp"><span>термін</span><span>5 місяців</span></div>
+              </div>
+              <ul class="price__list">
+                <li class="price__list-item price__list-item--active">Архітектурний розділ</li>
+                <li class="price__list-item price__list-item--active">Конструктивний розділ</li>
+                <li class="price__list-item price__list-item--active">Прорахунок кошторису</li>
+                <li class="price__list-item price__list-item--active">Дизайн проект</li>
+                <li class="price__list-item price__list-item--active">Візуалізація</li>
+                <li class="price__list-item price__list-item--active">
+                  Підготовка документів та отримання будівельного паспорту
+                </li>
+                <li class="price__list-item price__list-item--active">Подача заявки на початок проведення будівельних робіт</li>
+              </ul>
+              <button class="price__btn"><span>Обрати цей варіант</span></button>
+            </div>
+            <div class="price__item">
+              <div class="price__img-box">
+                <img class="price__img" src="images/icons/typical.svg" loading="lazy" alt="image" />
+              </div>
+              <h3 class="price__title">Typical</h3>
+              <div class="price__wrapp-box">
+                <div class="price__wrapp"><span>від</span><span>2 200 000 грн</span></div>
+                <div class="price__wrapp"><span>термін</span><span>5 місяців</span></div>
+              </div>
+              <p class="price__text">Адаптація конструктиву фундаменту; Зміна генерального плану.</p>
+              <button class="price__btn"><span>Обрати цей варіант</span></button>
+            </div>
+            <div class="price__item">
+              <div class="price__img-box">
+                <img class="price__img" src="images/icons/custom.svg" loading="lazy" alt="image" />
+              </div>
+              <h3 class="price__title">Custom</h3>
+              <div class="price__wrapp-box">
+                <div class="price__wrapp"><span>від</span><span>2 200 000 грн</span></div>
+                <div class="price__wrapp"><span>термін</span><span>5 місяців</span></div>
+              </div>
+              <p class="price__text">Будь яка складова частина будівництва.</p>
+              <button class="price__btn"><span>Обрати цей варіант</span></button>
+            </div>
+          </div>
+        </section>
+        <section class="stages" id="stages">
+          <div class="container">
+            <div class="stages__inner">
+              <div class="stages__item stages__title-box title-box">
+                <h2 class="section-title title">Етапи роботи</h2>
+              </div>
+              <div class="stages__item">
+                <div class="stages__item-num">1</div>
+                <div class="stages__item-img">
+                  <img class="stages__item-icon" src="images/icons/calculator.svg" loading="lazy" alt="icon" />
+                </div>
+                <div class="stages__item-text">Попередній розрахунок вартості</div>
+              </div>
+              <div class="stages__item">
+                <div class="stages__item-num">2</div>
+                <div class="stages__item-img">
+                  <img class="stages__item-icon" src="images/icons/ph_truck-thin.svg" loading="lazy" alt="icon" />
+                </div>
+                <div class="stages__item-text">Виїзд на ділянку</div>
+              </div>
+              <div class="stages__item">
+                <div class="stages__item-num">3</div>
+                <div class="stages__item-img">
+                  <img class="stages__item-icon" src="images/icons/arcticons_google-docs.svg" loading="lazy" alt="icon" />
+                </div>
+                <div class="stages__item-text">Роботи над проектною документацією, дизайном та прорахунок кошторису</div>
+              </div>
+              <div class="stages__item">
+                <div class="stages__item-num">4</div>
+                <div class="stages__item-img">
+                  <img class="stages__item-icon" src="images/icons/noun-foundation.svg" loading="lazy" alt="icon" />
+                </div>
+                <div class="stages__item-text">Підготовчі та фундаментні роботи</div>
+              </div>
+              <div class="stages__item">
+                <div class="stages__item-num">5</div>
+                <div class="stages__item-img">
+                  <img class="stages__item-icon" src="images/icons/building.svg" loading="lazy" alt="icon" />
+                </div>
+                <div class="stages__item-text">Будівництво стін та перекриттів поверхів</div>
+              </div>
+              <div class="stages__item">
+                <div class="stages__item-num">6</div>
+                <div class="stages__item-img">
+                  <img class="stages__item-icon" src="images/icons/light_roofing-outline-rounded.svg" loading="lazy" alt="icon" />
+                </div>
+                <div class="stages__item-text">Будівництво даху</div>
+              </div>
+              <div class="stages__item">
+                <div class="stages__item-num">7</div>
+                <div class="stages__item-img">
+                  <img class="stages__item-icon" src="images/icons/color-roller.svg" loading="lazy" alt="icon" />
+                </div>
+                <div class="stages__item-text">Фасадні роботи</div>
+              </div>
+              <div class="stages__item">
+                <div class="stages__item-num">8</div>
+                <div class="stages__item-img">
+                  <img class="stages__item-icon" src="images/icons/noun-furniture.svg" loading="lazy" alt="icon" />
+                </div>
+                <div class="stages__item-text">Оздоблення та меблювання</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="materials">
+          <div class="materials__inner">
+            <div class="materials__title-box title-box">
+              <h2 class="section-title title">Конструкційні матеріали</h2>
+            </div>
+            <div class="materials__items">
+              <div class="materials__item">
+                <img class="materials__img" src="images/gasblck.webp" loading="lazy" alt="images" />
+                <p class="materials__title">газоблок</p>
+              </div>
+              <div class="materials__item">
+                <img class="materials__img" src="images/rceramblock.webp" loading="lazy" alt="images" />
+                <p class="materials__title">керамоблок</p>
+              </div>
+              <div class="materials__item">
+                <img class="materials__img" src="images/bricks.webp" loading="lazy" alt="images" />
+                <p class="materials__title">цегла</p>
+              </div>
+              <div class="materials__item">
+                <img class="materials__img" src="images/mon.webp" loading="lazy" alt="images" />
+                <p class="materials__title">Моноліт</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="contacts" id="contacts">
+          <div class="contacts__title-box title-box">
+            <h2 class="section-title title">БудEмо на звʼязку</h2>
+          </div>
+          <div class="contacts__inner">
+            <div class="contacts-box">
+              <a class="contact-link header__contact-link" href="#"> <span>WHARSAPP</span></a>
+              <a class="contact-link header__contact-link" href="#"> <span>TELEGRAM</span></a>
+              <a class="contact-link header__contact-link" href="#"> <span>VIBER</span></a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <a class="footer__logo" href="#top">
+              <img class="footer__img" src="images/icons/logo-footer.png" width="132" height="118" loading="lazy" alt="logo" />
+            </a>
+            <div class="footer__item footer__contacts">
+              <h4 class="footer__title">Контакти</h4>
+              <p class="footer__adress">Киев и Киевская область</p>
+              <a class="footer__mail" href="maito:mail@mail.com">mail@mail.com</a>
+              <a class="footer__phone" href="tel:+380631694939">+380 631 69 4939</a>
+            </div>
+            <div class="footer__item footer__social">
+              <h4 class="footer__title">Ми у соціальних мережах</h4>
+              <ul class="footer__social-list">
+                <li class="footer__social-item">
+                  <a class="footer__social-link" href="#">
+                    <img
+                      class="footer__social-icon"
+                      src="images/icons/teenyicons_facebook-outline.svg"
+                      width="15"
+                      height="15"
+                      loading="lazy"
+                      alt="icon"
+                    />
+                    Facebook
+                  </a>
+                </li>
+                <li class="footer__social-item">
+                  <a class="footer__social-link" href="#">
+                    <img
+                      class="footer__social-icon"
+                      src="images/icons/openmoji_instagram.svg"
+                      width="15"
+                      height="15"
+                      loading="lazy"
+                      alt="icon"
+                    />
+                    Instagram
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__item footer__form">
+              <h4 class="footer__title footer__title--accent">Створи свій ідеальний дім</h4>
+              <a class="btn footer__contacts-btn" href="#section-form"><span>ЗАПОВНИТИ ФОРМУ</span></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="copyright">© 2024 | Proud Project</div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
