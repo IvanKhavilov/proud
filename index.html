@@ -1,80 +1,117 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="preload" as="image" href="images/main-bg.webp" />
+    <link href="css/swiper-bundle.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Proud Project</title>
   </head>
   <body>
-    <div class="page">
+    <div class="page" id="page">
       <header class="header">
-        <img class="header__logo logo" src="images/icons/logo-header.png" width="195" height="38" alt="logo" />
-        <a class="header__phone" href="tel:+380631694939">+380 631 69 4939</a>
-        <button class="burger" type="button">
+        <img class="header__logo logo" src="images/logo-header.webp" loading="eager" width="195" height="38" alt="logo" />
+        <a class="header__phone" href="tel:+380630000000">+38 063 000 00 00</a>
+        <button class="burger" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="menu">
           <span></span>
         </button>
       </header>
       <div class="menu-box">
-        <nav class="menu">
-          <ul class="menu-box__list menu__list">
+        <nav class="menu" id="menu" aria-label="Main menu">
+          <ul class="menu__list">
             <li class="menu__item"><a class="menu__link" href="#portfolio">Портфоліо</a></li>
             <li class="menu__item"><a class="menu__link" href="#price">Ціни</a></li>
-            <li class="menu__item"><a class="menu__link" href="#stages">етапи роботи</a></li>
-            <li class="menu__item"><a class="menu__link" href="#contascts">контакти</a></li>
+            <li class="menu__item"><a class="menu__link" href="#stages">Етапи роботи</a></li>
+            <li class="menu__item"><a class="menu__link" href="#contacts">Контакти</a></li>
           </ul>
         </nav>
         <div class="menu-box__contacts menu__contacts">
           <a class="btn header__contacts-btn" href="#section-form"><span>Отримати консультацію</span></a>
-          <a class="contact-link header__contact-link" href="#"><span>WHARSAPP</span></a>
-          <a class="contact-link header__contact-link" href="#"><span>TELEGRAM</span></a>
-          <a class="contact-link header__contact-link" href="#"><span>VIBER</span></a>
+          <a
+            class="contact-link header__contact-link"
+            href="https://wa.me/380960000000"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>WHATSAPP</span>
+          </a>
+          <a class="contact-link header__contact-link" href="https://t.me" target="_blank" rel="noopener noreferrer">
+            <span>TELEGRAM</span>
+          </a>
+          <!-- Ссылка на Viber: может не открывать конкретный чат на десктопе, если контакт не в записной книжке -->
+          <a
+            class="contact-link header__contact-link"
+            href="viber://chat?number=%2B380960000000"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>VIBER</span>
+          </a>
         </div>
         <a class="btn mobile__contacts-btn" href="#section-form">Отримати консультацію</a>
-        <a class="mobile__phone" href="tel:+380631694939">+380 631 69 4939</a>
+        <a class="mobile__phone" href="tel:+380960000000">+380 630 00 0000</a>
       </div>
 
       <main class="main">
         <section class="hero">
-          <h1 class="hero-title">ПроЄктування та будівництво сучасних <span>будинків під ключ</span></h1>
+          <h1 class="hero-title">
+            Проєктування та будівництво сучасних
+            <span>будинків під ключ</span>
+          </h1>
           <div class="hero__inner">
             <div class="container hero__container">
-              <div class="hero--decor"></div>
-              <div class="hero--decor"></div>
-              <div class="hero--decor"></div>
+              <div class="hero__decor"></div>
+              <div class="hero__decor"></div>
+              <div class="hero__decor"></div>
               <a class="btn hero__contacts-btn" href="#section-form"><span>Отримати консультацію</span></a>
             </div>
             <div class="hero__inner--decor"></div>
-            <a class="hero__arrow-to-bottom arrow-to-bottom wow fadeInDown" href="#services"></a>
+            <a class="hero__arrow-to-bottom arrow-to-bottom" aria-label="Scroll to services" href="#services"></a>
           </div>
         </section>
         <section class="services" id="services">
           <div class="container">
             <div class="services__inner">
-              <div class="services__title-box title-box">
-                <h2 class="section-title title wow slideInLeft" data-wow-duration="1s" data-wow-delay="1s">Наші послуги</h2>
-              </div>
               <div class="services__box">
-                <div class="services__item services__item--hover-scale wow flipInX" data-wow-duration="1s" data-wow-delay="2s">
-                  <img class="services__img services__img--1" src="images/pngwing.webp" loading="lazy" alt="image" />
+                <div class="services__title-box title-box">
+                  <h2 class="section-title title" data-animate="fade-up" data-delay="200">Наші послуги</h2>
+                </div>
+                <div class="services__item services__item--hover-scale" data-animate="fade-left" data-delay="400">
+                  <img
+                    class="services__img services__img--1"
+                    src="images/pngwing.webp"
+                    width="250"
+                    height="130"
+                    loading="lazy"
+                    alt="Проєктування"
+                  />
                   <h3 class="services__title">Проєктування</h3>
                 </div>
-                <div class="services__item services__item--hover-scale wow flipInX" data-wow-duration="2s" data-wow-delay="2.5s">
-                  <img class="services__img services__img--2" src="images/image-4.webp" loading="lazy" alt="image" />
+                <div class="services__item services__item--hover-scale" data-animate="zoom-in" data-delay="600">
+                  <img
+                    class="services__img services__img--2"
+                    src="images/image-4.webp"
+                    width="325"
+                    height="320"
+                    loading="lazy"
+                    alt="Реконструкція"
+                  />
                   <h3 class="services__title">Реконструкція</h3>
                 </div>
                 <div
-                  class="services__item services__item--hover-scale services__item--hover-bg wow flipInX"
-                  data-wow-duration="1s"
-                  data-wow-delay="3s"
+                  class="services__item services__item--hover-scale services__item--hover-bg"
+                  data-animate="fade-right"
+                  data-delay="800"
                 >
                   <img
                     class="services__img services__img--3"
                     src="images/building-architecture.webp"
+                    width="500"
+                    height="300"
                     loading="lazy"
-                    alt="image"
+                    alt="Комплексне будівництво"
                   />
                   <h3 class="services__title">Комплексне будівництво</h3>
                 </div>
@@ -87,32 +124,25 @@
             <div class="section-form__inner">
               <div class="section-form__form-box form-box">
                 <div class="section-form__title-box title-box">
-                  <h2 class="section-title title">Отримайте детальну консультацію від експерта!</h2>
+                  <h2 class="section-form__title title">Отримайте детальну консультацію від експерта!</h2>
                 </div>
                 <p class="section-form__subtitle">Заповніть поля форми, і наш фахівець зв'яжеться з Вами протягом 30 хвилин</p>
                 <form class="form" action="#">
                   <input class="section-form__input" type="text" placeholder="Імʼя" required />
                   <input
                     class="section-form__input"
+                    id="tel"
                     type="tel"
                     placeholder="Номер телефону"
-                    pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
-                    id="tel"
+                    pattern="^\+?[0-9\s\-()]{10,}$"
                     required
                   />
                   <label class="section-form__label" for="tel"><span>*це поле може містити тільки цифри</span></label>
                   <button class="section-form__btn" type="submit">Надіслати</button>
                 </form>
-                <div class="section-form__form-success form-success">
-                  <button class="form-success__btn"></button>
-                  <div class="section-form__title-box title-box">
-                    <h2 class="section-title title">Дякуємо</h2>
-                  </div>
-                  <p class="form-success__text">Ваші дані успішно надіслані, наш фахівець зв'яжеться з Вами протягом 30 хвилин</p>
-                </div>
               </div>
               <div class="section-form__title-box section-form__title-box--decor title-box">
-                <h2 class="section-title title">Хочете консультацію?</h2>
+                <h2 class="section-form__title title">Хочете консультацію?</h2>
               </div>
             </div>
           </div>
@@ -121,132 +151,311 @@
           <div class="container">
             <div class="portfolio__inner">
               <div class="portfolio__title-box title-box">
-                <h2 class="section-title title">ПОРТФОЛІО</h2>
+                <h2 class="section-title title" data-animate="zoom-in" data-delay="200">ПОРТФОЛІО</h2>
               </div>
-              <div class="portfolio__slider">
-                <div class="portfolio__slider-item">
-                  <div class="portfolio__slider-top">
-                    <div class="portfolio__slider-title">
-                      <p>01</p>
-                      <p>Перший приклад</p>
+              <!-- Слайдер проектов -->
+              <div class="main-slider swiper">
+                <div class="swiper-wrapper">
+                  <!-- Слайд 1 -->
+                  <div class="swiper-slide main-slider__slide">
+                    <!-- Описание проекта -->
+                    <div class="portfolio__slider-top">
+                      <div class="portfolio__slider-title">
+                        <span>01</span>
+                        Перший приклад
+                      </div>
+                      <div class="portfolio__slider-descr">
+                        <p class="portfolio__slider-text">
+                          Короткий опис цього проєкту буквально речення, щоб зацікавити користувача. Можемо додати попап з медіа і
+                          прибрати стрічку фото. Короткий опис цього проєкту буквально речення, щоб зацікавити користувача. Можемо
+                          додати попап з медіа і прибрати стрічку фото.
+                        </p>
+                        <p class="portfolio__slider-date">2022</p>
+                        <p class="portfolio__slider-level">medium</p>
+                      </div>
                     </div>
-                    <div class="portfolio__slider-descr">
-                      <p class="portfolio__slider-text">
-                        Короткий опис цього проєкту буквально речення, щоб зацікавити користувача. Можемо додати попап з медіа і
-                        прибрати стрічку фото. Короткий опис цього проєкту буквально речення, щоб зацікавити користувача. Можемо
-                        додати попап з медіа і прибрати стрічку фото.
-                      </p>
-                      <p class="portfolio__slider-date">2022</p>
-                      <p class="portfolio__slider-lavel">medium</p>
+                    <!-- Блок со слайдерами -->
+                    <div class="portfolio__slider-bottom">
+                      <!-- thumbs -->
+                      <div class="swiper thumbs-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              class="thumbs-slider__img"
+                              src="images/slide-1.webp"
+                              loading="lazy"
+                              width="200"
+                              height="130"
+                              alt="картинка слайда 1"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              class="thumbs-slider__img"
+                              src="images/slide-2.webp"
+                              loading="lazy"
+                              width="200"
+                              height="130"
+                              alt="картинка слайда 2"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              class="thumbs-slider__img"
+                              src="images/slide-3.webp"
+                              loading="lazy"
+                              width="200"
+                              height="130"
+                              alt="картинка слайда 3"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              class="thumbs-slider__img"
+                              src="images/slide-4.webp"
+                              loading="lazy"
+                              width="200"
+                              height="130"
+                              alt="картинка слайда 4"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              class="thumbs-slider__img"
+                              src="images/slide-5.webp"
+                              loading="lazy"
+                              width="200"
+                              height="130"
+                              alt="картинка слайда 5"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              class="thumbs-slider__img"
+                              src="images/slide-1.webp"
+                              loading="lazy"
+                              width="200"
+                              height="130"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Основной слайдер -->
+                      <div class="swiper inner-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              class="inner-slider__img"
+                              src="images/slide-1.webp"
+                              loading="lazy"
+                              width="1000"
+                              height="667"
+                              alt="картинка слайда 1"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              class="inner-slider__img"
+                              src="images/slide-2.webp"
+                              loading="lazy"
+                              width="1000"
+                              height="667"
+                              alt="картинка слайда 2"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              class="inner-slider__img"
+                              src="images/slide-3.webp"
+                              loading="lazy"
+                              width="1000"
+                              height="667"
+                              alt="картинка слайда 3"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              class="inner-slider__img"
+                              src="images/slide-4.webp"
+                              loading="lazy"
+                              width="1000"
+                              height="667"
+                              alt="картинка слайда 4"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              class="inner-slider__img"
+                              src="images/slide-5.webp"
+                              loading="lazy"
+                              width="1000"
+                              height="667"
+                              alt="картинка слайда 5"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              class="inner-slider__img"
+                              src="images/slide-1.webp"
+                              loading="lazy"
+                              width="1000"
+                              height="667"
+                              alt="картинка слайда 1"
+                            />
+                          </div>
+                        </div>
+                        <!-- Пагинация -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Навигация внутри слайдера -->
+                        <div class="inner-slider__prev"></div>
+                        <div class="inner-slider__next"></div>
+                      </div>
                     </div>
                   </div>
-                  <div class="portfolio__slider-bottom portfolio__carosel">
-                    <div class="portfolio__carosel-small">
-                      <div class="portfolio__carosel-image portfolio__carosel-small-img">
-                        <img src="images/slider-img-1.webp" loading="lazy" alt="images" />
+                  <!-- Слайд 2 -->
+                  <div class="swiper-slide main-slider__slide">
+                    <!-- Описание проекта -->
+                    <div class="portfolio__slider-top">
+                      <div class="portfolio__slider-title">
+                        <span>02</span>
+                        Другий приклад
                       </div>
-                      <div class="portfolio__carosel-image portfolio__carosel-small-img">
-                        <img src="images/main-bg.webp" loading="lazy" alt="images" />
-                      </div>
-                      <div class="portfolio__carosel-image portfolio__carosel-small-img">
-                        <img src="images/slider-img-1.webp" loading="lazy" alt="images" />
-                      </div>
-                      <div class="portfolio__carosel-image portfolio__carosel-small-img">
-                        <img src="images/main-bg.webp" loading="lazy" alt="images" />
-                      </div>
-                      <div class="portfolio__carosel-image portfolio__carosel-small-img">
-                        <img src="images/mon.webp" loading="lazy" alt="images" />
+                      <div class="portfolio__slider-descr">
+                        <p class="portfolio__slider-text">
+                          Короткий опис цього проєкту буквально речення, щоб зацікавити користувача. Можемо додати попап з медіа і
+                          прибрати стрічку фото.
+                        </p>
+                        <p class="portfolio__slider-date">2022</p>
+                        <p class="portfolio__slider-level">medium</p>
                       </div>
                     </div>
-                    <div class="portfolio__carosel-big">
-                      <div class="portfolio__carosel-image portfolio__carosel-big-img">
-                        <img src="images/slider-img-1.webp" loading="lazy" alt="images" />
+                    <!-- Блок со слайдерами -->
+                    <div class="portfolio__slider-bottom">
+                      <!-- thumbs -->
+                      <div class="swiper thumbs-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              class="thumbs-slider__img"
+                              src="images/slide-1.webp"
+                              loading="lazy"
+                              width="200"
+                              height="130"
+                              alt="картинка слайда 1"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              class="thumbs-slider__img"
+                              src="images/slide-2.webp"
+                              loading="lazy"
+                              width="200"
+                              height="130"
+                              alt="картинка слайда 2"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              class="thumbs-slider__img"
+                              src="images/slide-3.webp"
+                              loading="lazy"
+                              width="200"
+                              height="130"
+                              alt="картинка слайда 3"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              class="thumbs-slider__img"
+                              src="images/slide-4.webp"
+                              loading="lazy"
+                              width="200"
+                              height="130"
+                              alt=""
+                            />
+                          </div>
+                        </div>
                       </div>
-                      <div class="portfolio__carosel-image portfolio__carosel-big-img">
-                        <img src="images/main-bg.webp" loading="lazy" alt="images" />
-                      </div>
-                      <div class="portfolio__carosel-image portfolio__carosel-big-img">
-                        <img src="images/slider-img-1.webp" loading="lazy" alt="images" />
-                      </div>
-                      <div class="portfolio__carosel-image portfolio__carosel-big-img">
-                        <img src="images/main-bg.webp" loading="lazy" alt="images" />
-                      </div>
-                      <div class="portfolio__carosel-image portfolio__carosel-big-img">
-                        <img src="images/mon.webp" loading="lazy" alt="images" />
+                      <!-- Основной слайдер -->
+                      <div class="swiper inner-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              class="inner-slider__img"
+                              src="images/slide-1.webp"
+                              loading="lazy"
+                              width="1000"
+                              height="667"
+                              alt="картинка слайда 1"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              class="inner-slider__img"
+                              src="images/slide-2.webp"
+                              loading="lazy"
+                              width="1000"
+                              height="667"
+                              alt="картинка слайда 2"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              class="inner-slider__img"
+                              src="images/slide-3.webp"
+                              loading="lazy"
+                              width="1000"
+                              height="667"
+                              alt="картинка слайда 3"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              class="inner-slider__img"
+                              src="images/slide-4.webp"
+                              loading="lazy"
+                              width="1000"
+                              height="667"
+                              alt="картинка слайда 4"
+                            />
+                          </div>
+                        </div>
+                        <!-- Пагинация -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Навигация внутри слайдера -->
+                        <div class="inner-slider__prev"></div>
+                        <div class="inner-slider__next"></div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="portfolio__slider-item">
-                  <div class="portfolio__slider-top">
-                    <div class="portfolio__slider-title">
-                      <p>03</p>
-                      <p>Третій приклад</p>
-                    </div>
-                    <div class="portfolio__slider-descr">
-                      <p class="portfolio__slider-text">
-                        Короткий опис цього проєкту буквально речення, щоб зацікавити користувача. Можемо додати попап з медіа і
-                        прибрати стрічку фото. Короткий опис цього проєкту буквально речення, щоб зацікавити користувача. Можемо
-                        додати попап з медіа і прибрати стрічку фото.
-                      </p>
-                      <p class="portfolio__slider-date">2022</p>
-                      <p class="portfolio__slider-lavel">medium</p>
-                    </div>
-                  </div>
-                  <div class="portfolio__slider-bottom portfolio__carosel">
-                    <div class="portfolio__carosel-small">
-                      <div class="portfolio__carosel-image portfolio__carosel-small-img">
-                        <img src="images/slider-img-1.webp" loading="lazy" alt="images" />
-                      </div>
-                      <div class="portfolio__carosel-image portfolio__carosel-small-img">
-                        <img src="images/main-bg.webp" loading="lazy" alt="images" />
-                      </div>
-                      <div class="portfolio__carosel-image portfolio__carosel-small-img">
-                        <img src="images/slider-img-1.webp" loading="lazy" alt="images" />
-                      </div>
-                      <div class="portfolio__carosel-image portfolio__carosel-small-img">
-                        <img src="images/main-bg.webp" loading="lazy" alt="images" />
-                      </div>
-                      <div class="portfolio__carosel-image portfolio__carosel-small-img">
-                        <img src="images/slider-img-1.webp" loading="lazy" alt="images" />
-                      </div>
-                    </div>
-                    <div class="portfolio__carosel-big">
-                      <div class="portfolio__carosel-image portfolio__carosel-big-img">
-                        <img src="images/slider-img-1.webp" loading="lazy" alt="images" />
-                      </div>
-                      <div class="portfolio__carosel-image portfolio__carosel-big-img">
-                        <img src="images/main-bg.webp" loading="lazy" alt="images" />
-                      </div>
-                      <div class="portfolio__carosel-image portfolio__carosel-big-img">
-                        <img src="images/slider-img-1.webp" loading="lazy" alt="images" />
-                      </div>
-                      <div class="portfolio__carosel-image portfolio__carosel-big-img">
-                        <img src="images/main-bg.webp" loading="lazy" alt="images" />
-                      </div>
-                      <div class="portfolio__carosel-image portfolio__carosel-big-img">
-                        <img src="images/slider-img-1.webp" loading="lazy" alt="images" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <!-- Навигация слайдера проектов -->
+                <div class="main-slider__prev"><span>Попередній проєкт</span></div>
+                <div class="main-slider__next"><span>Наступний проєкт</span></div>
               </div>
             </div>
           </div>
         </section>
         <section class="price" id="price">
           <div class="price__title-box title-box">
-            <h2 class="section-title title">Ціни на проєктування</h2>
+            <h2 class="section-title title" data-animate="zoom-in" data-delay="200">Ціни на проєктування</h2>
           </div>
           <div class="price__inner">
             <div class="price__item">
               <div class="price__img-box">
-                <img class="price__img" src="images/icons/basic.svg" loading="lazy" alt="image" />
+                <img class="price__img" src="images/icons/basic.svg" loading="lazy" width="107" height="86" alt="Basic" />
               </div>
               <h3 class="price__title">Basic</h3>
               <div class="price__wrapp-box">
-                <div class="price__wrapp"><span>від</span><span>1 200 000 грн</span></div>
-                <div class="price__wrapp"><span>термін</span><span>7 днів</span></div>
+                <div class="price__wrapp">
+                  <span>від</span>
+                  <span>1 200 000 грн</span>
+                </div>
+                <div class="price__wrapp">
+                  <span>термін</span>
+                  <span>7 днів</span>
+                </div>
               </div>
               <ul class="price__list">
                 <li class="price__list-item price__list-item--active">Архітектурний розділ</li>
@@ -259,16 +468,22 @@
                 </li>
                 <li class="price__list-item price__list-item--disable">Подача заявки на початок проведення будівельних робіт</li>
               </ul>
-              <button class="price__btn"><span>Обрати цей варіант</span></button>
+              <button class="price__btn" type="button"><span>Обрати цей варіант</span></button>
             </div>
             <div class="price__item">
               <div class="price__img-box">
-                <img class="price__img" src="images/icons/medium.svg" loading="lazy" alt="image" />
+                <img class="price__img" src="images/icons/medium.svg" loading="lazy" width="148" height="80" alt="Medium" />
               </div>
               <h3 class="price__title">Medium</h3>
               <div class="price__wrapp-box">
-                <div class="price__wrapp"><span>від</span><span>2 200 000 грн</span></div>
-                <div class="price__wrapp"><span>термін</span><span>5 місяців</span></div>
+                <div class="price__wrapp">
+                  <span>від</span>
+                  <span>2 200 000 грн</span>
+                </div>
+                <div class="price__wrapp">
+                  <span>термін</span>
+                  <span>5 місяців</span>
+                </div>
               </div>
               <ul class="price__list">
                 <li class="price__list-item price__list-item--active">Архітектурний розділ</li>
@@ -281,16 +496,22 @@
                 </li>
                 <li class="price__list-item price__list-item--disable">Подача заявки на початок проведення будівельних робіт</li>
               </ul>
-              <button class="price__btn"><span>Обрати цей варіант</span></button>
+              <button class="price__btn" type="button"><span>Обрати цей варіант</span></button>
             </div>
             <div class="price__item">
               <div class="price__img-box">
-                <img class="price__img" src="images/icons/full.svg" loading="lazy" alt="image" />
+                <img class="price__img" src="images/icons/full.svg" loading="lazy" width="186" height="90" alt="Full" />
               </div>
               <h3 class="price__title">Full</h3>
               <div class="price__wrapp-box">
-                <div class="price__wrapp"><span>від</span><span>12 200 000 грн</span></div>
-                <div class="price__wrapp"><span>термін</span><span>5 місяців</span></div>
+                <div class="price__wrapp">
+                  <span>від</span>
+                  <span>12 200 000 грн</span>
+                </div>
+                <div class="price__wrapp">
+                  <span>термін</span>
+                  <span>5 місяців</span>
+                </div>
               </div>
               <ul class="price__list">
                 <li class="price__list-item price__list-item--active">Архітектурний розділ</li>
@@ -303,119 +524,194 @@
                 </li>
                 <li class="price__list-item price__list-item--active">Подача заявки на початок проведення будівельних робіт</li>
               </ul>
-              <button class="price__btn"><span>Обрати цей варіант</span></button>
+              <button class="price__btn" type="button"><span>Обрати цей варіант</span></button>
             </div>
             <div class="price__item">
               <div class="price__img-box">
-                <img class="price__img" src="images/icons/typical.svg" loading="lazy" alt="image" />
+                <img class="price__img" src="images/icons/typical.svg" loading="lazy" width="171" height="81" alt="Typical" />
               </div>
               <h3 class="price__title">Typical</h3>
               <div class="price__wrapp-box">
-                <div class="price__wrapp"><span>від</span><span>2 200 000 грн</span></div>
-                <div class="price__wrapp"><span>термін</span><span>5 місяців</span></div>
+                <div class="price__wrapp">
+                  <span>від</span>
+                  <span>2 200 000 грн</span>
+                </div>
+                <div class="price__wrapp">
+                  <span>термін</span>
+                  <span>5 місяців</span>
+                </div>
               </div>
               <p class="price__text">Адаптація конструктиву фундаменту; Зміна генерального плану.</p>
-              <button class="price__btn"><span>Обрати цей варіант</span></button>
+              <button class="price__btn" type="button"><span>Обрати цей варіант</span></button>
             </div>
             <div class="price__item">
               <div class="price__img-box">
-                <img class="price__img" src="images/icons/custom.svg" loading="lazy" alt="image" />
+                <img class="price__img" src="images/icons/custom.svg" loading="lazy" width="103" height="75" alt="Custom" />
               </div>
               <h3 class="price__title">Custom</h3>
               <div class="price__wrapp-box">
-                <div class="price__wrapp"><span>від</span><span>2 200 000 грн</span></div>
-                <div class="price__wrapp"><span>термін</span><span>5 місяців</span></div>
+                <div class="price__wrapp">
+                  <span>від</span>
+                  <span>2 200 000 грн</span>
+                </div>
+                <div class="price__wrapp">
+                  <span>термін</span>
+                  <span>5 місяців</span>
+                </div>
               </div>
               <p class="price__text">Будь яка складова частина будівництва.</p>
-              <button class="price__btn"><span>Обрати цей варіант</span></button>
+              <button class="price__btn" type="button"><span>Обрати цей варіант</span></button>
             </div>
           </div>
         </section>
         <section class="stages" id="stages">
           <div class="container">
-            <div class="stages__inner">
-              <div class="stages__item stages__title-box title-box">
-                <h2 class="section-title title">Етапи роботи</h2>
-              </div>
-              <div class="stages__item">
+            <ul class="stages__list">
+              <li class="stages__item stages__title-box title-box">
+                <h2 class="section-title title" data-animate="fade-left" data-delay="200">Етапи роботи</h2>
+              </li>
+              <li class="stages__item">
                 <div class="stages__item-num">1</div>
                 <div class="stages__item-img">
-                  <img class="stages__item-icon" src="images/icons/calculator.svg" loading="lazy" alt="icon" />
+                  <img
+                    class="stages__item-icon"
+                    src="images/icons/calculator.svg"
+                    loading="lazy"
+                    width="40"
+                    height="40"
+                    alt="calculator"
+                  />
                 </div>
                 <div class="stages__item-text">Попередній розрахунок вартості</div>
-              </div>
-              <div class="stages__item">
+              </li>
+              <li class="stages__item">
                 <div class="stages__item-num">2</div>
                 <div class="stages__item-img">
-                  <img class="stages__item-icon" src="images/icons/ph_truck-thin.svg" loading="lazy" alt="icon" />
+                  <img
+                    class="stages__item-icon"
+                    src="images/icons/ph_truck-thin.svg"
+                    loading="lazy"
+                    width="46"
+                    height="46"
+                    alt="truck"
+                  />
                 </div>
                 <div class="stages__item-text">Виїзд на ділянку</div>
-              </div>
-              <div class="stages__item">
+              </li>
+              <li class="stages__item">
                 <div class="stages__item-num">3</div>
                 <div class="stages__item-img">
-                  <img class="stages__item-icon" src="images/icons/arcticons_google-docs.svg" loading="lazy" alt="icon" />
+                  <img
+                    class="stages__item-icon"
+                    src="images/icons/arcticons_google-docs.svg"
+                    loading="lazy"
+                    width="46"
+                    height="46"
+                    alt="docs"
+                  />
                 </div>
                 <div class="stages__item-text">Роботи над проектною документацією, дизайном та прорахунок кошторису</div>
-              </div>
-              <div class="stages__item">
+              </li>
+              <li class="stages__item">
                 <div class="stages__item-num">4</div>
                 <div class="stages__item-img">
-                  <img class="stages__item-icon" src="images/icons/noun-foundation.svg" loading="lazy" alt="icon" />
+                  <img
+                    class="stages__item-icon"
+                    src="images/icons/noun-foundation.svg"
+                    loading="lazy"
+                    width="40"
+                    height="40"
+                    alt="foundation"
+                  />
                 </div>
                 <div class="stages__item-text">Підготовчі та фундаментні роботи</div>
-              </div>
-              <div class="stages__item">
+              </li>
+              <li class="stages__item">
                 <div class="stages__item-num">5</div>
                 <div class="stages__item-img">
-                  <img class="stages__item-icon" src="images/icons/building.svg" loading="lazy" alt="icon" />
+                  <img
+                    class="stages__item-icon"
+                    src="images/icons/building.svg"
+                    loading="lazy"
+                    width="46"
+                    height="46"
+                    alt="building"
+                  />
                 </div>
                 <div class="stages__item-text">Будівництво стін та перекриттів поверхів</div>
-              </div>
-              <div class="stages__item">
+              </li>
+              <li class="stages__item">
                 <div class="stages__item-num">6</div>
                 <div class="stages__item-img">
-                  <img class="stages__item-icon" src="images/icons/light_roofing-outline-rounded.svg" loading="lazy" alt="icon" />
+                  <img
+                    class="stages__item-icon"
+                    src="images/icons/light_roofing-outline-rounded.svg"
+                    loading="lazy"
+                    width="46"
+                    height="46"
+                    alt="roofing"
+                  />
                 </div>
                 <div class="stages__item-text">Будівництво даху</div>
-              </div>
-              <div class="stages__item">
+              </li>
+              <li class="stages__item">
                 <div class="stages__item-num">7</div>
                 <div class="stages__item-img">
-                  <img class="stages__item-icon" src="images/icons/color-roller.svg" loading="lazy" alt="icon" />
+                  <img
+                    class="stages__item-icon"
+                    src="images/icons/color-roller.svg"
+                    loading="lazy"
+                    width="46"
+                    height="46"
+                    alt="roller"
+                  />
                 </div>
                 <div class="stages__item-text">Фасадні роботи</div>
-              </div>
-              <div class="stages__item">
+              </li>
+              <li class="stages__item">
                 <div class="stages__item-num">8</div>
                 <div class="stages__item-img">
-                  <img class="stages__item-icon" src="images/icons/noun-furniture.svg" loading="lazy" alt="icon" />
+                  <img
+                    class="stages__item-icon"
+                    src="images/icons/noun-furniture.svg"
+                    loading="lazy"
+                    width="38"
+                    height="40"
+                    alt="furniture"
+                  />
                 </div>
                 <div class="stages__item-text">Оздоблення та меблювання</div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </section>
         <section class="materials">
           <div class="materials__inner">
             <div class="materials__title-box title-box">
-              <h2 class="section-title title">Конструкційні матеріали</h2>
+              <h2 class="section-title title" data-animate="zoom-in" data-delay="200">Конструкційні матеріали</h2>
             </div>
             <div class="materials__items">
               <div class="materials__item">
-                <img class="materials__img" src="images/gasblck.webp" loading="lazy" alt="images" />
+                <img class="materials__img" src="images/gasblck.webp" loading="lazy" width="310" height="256" alt="газоблок" />
                 <p class="materials__title">газоблок</p>
               </div>
               <div class="materials__item">
-                <img class="materials__img" src="images/rceramblock.webp" loading="lazy" alt="images" />
+                <img
+                  class="materials__img"
+                  src="images/rceramblock.webp"
+                  loading="lazy"
+                  width="310"
+                  height="256"
+                  alt="керамоблок"
+                />
                 <p class="materials__title">керамоблок</p>
               </div>
               <div class="materials__item">
-                <img class="materials__img" src="images/bricks.webp" loading="lazy" alt="images" />
+                <img class="materials__img" src="images/bricks.webp" loading="lazy" width="310" height="256" alt="цегла" />
                 <p class="materials__title">цегла</p>
               </div>
               <div class="materials__item">
-                <img class="materials__img" src="images/mon.webp" loading="lazy" alt="images" />
+                <img class="materials__img" src="images/mon.webp" loading="lazy" width="310" height="256" alt="моноліт" />
                 <p class="materials__title">Моноліт</p>
               </div>
             </div>
@@ -423,14 +719,28 @@
         </section>
         <section class="contacts" id="contacts">
           <div class="contacts__title-box title-box">
-            <h2 class="section-title title">БудEмо на звʼязку</h2>
+            <h2 class="section-title title" data-animate="fade-up" data-delay="200">Будeмо на звʼязку</h2>
           </div>
           <div class="contacts__inner">
-            <div class="contacts-box">
-              <a class="contact-link header__contact-link" href="#"> <span>WHARSAPP</span></a>
-              <a class="contact-link header__contact-link" href="#"> <span>TELEGRAM</span></a>
-              <a class="contact-link header__contact-link" href="#"> <span>VIBER</span></a>
-            </div>
+            <a
+              class="contact-link header__contact-link"
+              href="https://wa.me/380960000000"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>WHATSAPP</span>
+            </a>
+            <a class="contact-link header__contact-link" href="https://t.me" target="_blank" rel="noopener noreferrer">
+              <span>TELEGRAM</span>
+            </a>
+            <a
+              class="contact-link header__contact-link"
+              href="viber://chat?number=%2B380960000000"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>VIBER</span>
+            </a>
           </div>
         </section>
       </main>
@@ -438,14 +748,14 @@
       <footer class="footer">
         <div class="container">
           <div class="footer__inner">
-            <a class="footer__logo" href="#top">
-              <img class="footer__img" src="images/icons/logo-footer.png" width="132" height="118" loading="lazy" alt="logo" />
+            <a class="footer__logo" href="#page">
+              <img class="footer__img" src="images/logo-footer.webp" width="132" height="118" loading="lazy" alt="logo" />
             </a>
             <div class="footer__item footer__contacts">
               <h4 class="footer__title">Контакти</h4>
-              <p class="footer__adress">Киев и Киевская область</p>
-              <a class="footer__mail" href="maito:mail@mail.com">mail@mail.com</a>
-              <a class="footer__phone" href="tel:+380631694939">+380 631 69 4939</a>
+              <p class="footer__adress">Київ і Київська область</p>
+              <a class="footer__mail" href="mailto:mail@mail.com">mail@mail.com</a>
+              <a class="footer__phone" href="tel:+380630000000">+38 063 000 00 00</a>
             </div>
             <div class="footer__item footer__social">
               <h4 class="footer__title">Ми у соціальних мережах</h4>
@@ -458,7 +768,7 @@
                       width="15"
                       height="15"
                       loading="lazy"
-                      alt="icon"
+                      alt="facebook"
                     />
                     Facebook
                   </a>
@@ -471,7 +781,7 @@
                       width="15"
                       height="15"
                       loading="lazy"
-                      alt="icon"
+                      alt="instagram"
                     />
                     Instagram
                   </a>
@@ -487,9 +797,15 @@
       </footer>
       <div class="copyright">© 2024 | Proud Project</div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/wow.min.js"></script>
+    <div class="modal" id="modal-success" role="dialog" aria-modal="true">
+      <div class="modal__overlay"></div>
+      <div class="modal__content">
+        <button class="modal__close" aria-label="Закрыть">&#10005;</button>
+        <h3 class="modal__title">Дякуємо</h3>
+        <p>Ваші дані успішно надіслані, наш фахівець зв'яжеться з Вами протягом 30 хвилин</p>
+      </div>
+    </div>
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
